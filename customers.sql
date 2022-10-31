@@ -8,4 +8,4 @@ INNER JOIN
 group by 1) orders
 on customers.customer_id = orders.customer_id
 order by first_order_at
-LIMIT 5;
+LIMIT 10;
