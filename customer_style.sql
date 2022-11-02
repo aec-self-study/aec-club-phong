@@ -11,13 +11,13 @@ with orders as  (
 
 
 select 
-    id, 
+    id as customer_id, 
     name, 
     email, 
     first_order_at, 
     orders.number_of_orders 
 from `analytics-engineers-club.coffee_shop.customers` as customers
 inner join orders
-    on customers.id = orders.customer_id
+    on customers.customer_id = orders.customer_id
 order by first_order_at
 limit 5;
